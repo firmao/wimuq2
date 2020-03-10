@@ -1,0 +1,10 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+select ?x ?y where{
+?x a dbo:Person;
+foaf:name ?n .
+?y a dbo:Person;
+foaf:name ?n .
+Filter(?x != ?y)
+}
